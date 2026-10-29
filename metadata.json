@@ -1,0 +1,6 @@
+{
+  "name": "StudyTest AI",
+  "description": "Generate fully customizable practice exams and tests from notes, books, and documents with AI grading, instant feedback, and progress tracking in English, Urdu, and Hinglish.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

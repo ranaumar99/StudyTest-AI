@@ -1,0 +1,12 @@
+# One-click backend hosting on Render.com (free tier). Set GEMINI_API_KEY in the dashboard.
+services:
+  - type: web
+    name: studytest-ai
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: NODE_ENV=production npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false

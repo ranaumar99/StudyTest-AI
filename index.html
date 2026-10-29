@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
+    <title>StudyTest AI - Premium AI Test-Generator & Exam Prep</title>
+    <meta name="description" content="Generate fully customizable practice exams and tests from notes, books, and documents with AI grading, instant feedback, and progress tracking in English, Urdu, and Hinglish." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#0f172a" id="theme-color-meta" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="StudyTest AI - Premium AI Test-Generator & Exam Prep" />
+    <meta property="og:description" content="Generate fully customizable practice exams and tests from notes, books, and documents with AI grading, instant feedback, and progress tracking in English, Urdu, and Hinglish." />
+    <meta property="og:site_name" content="StudyTest AI" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="StudyTest AI - Premium AI Test-Generator & Exam Prep" />
+    <meta name="twitter:description" content="Generate fully customizable practice exams and tests from notes, books, and documents with AI grading, instant feedback, and progress tracking in English, Urdu, and Hinglish." />
+
+    <!-- Fonts: Plus Jakarta Sans & Noto Nastaliq Urdu -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+
+    <!-- Theme Initialization Script (Zero-Flash) -->
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('studytest_theme') || 'system';
+          const isDark = stored === 'dark' || (stored === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            const meta = document.getElementById('theme-color-meta');
+            if (meta) meta.setAttribute('content', '#090d16');
+          } else {
+            document.documentElement.classList.remove('dark');
+            const meta = document.getElementById('theme-color-meta');
+            if (meta) meta.setAttribute('content', '#f8fafc');
+          }
+        } catch (e) {
+          /* ignore */
+        }
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-indigo-500/20 selection:text-indigo-600 dark:selection:text-indigo-300">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
